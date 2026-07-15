@@ -101,7 +101,7 @@ const Home = () => {
 
           {/* Heading */}
           <div className="text-center">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
               Download directly to your
               <br />
               Phone or PC
