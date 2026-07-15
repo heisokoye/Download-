@@ -5,12 +5,10 @@ const { YtDlp } = require("ytdlp-nodejs");
 const ytdlp = new YtDlp()
 const app = express();// this line creates the server
 
-app.use(cors({
-    origin: process.env.FRONTEND_URL || "*", // Allow specific frontend or all
-})); 
+app.use(cors()); //this line allows our frontend to connect to our backend
 app.use(express.json()); // this line allows our backend to accept json data
 
-const PORT = process.env.PORT || 5000 //this is the port number
+const PORT = 5000 //this is the port number
 
 app.get("/", (req, res)=>{
     res.send("Hello from my backend!")

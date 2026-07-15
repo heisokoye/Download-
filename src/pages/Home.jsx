@@ -10,8 +10,6 @@ const Home = () => {
   const [videoinfo, setVideoInfo] = useState(null);
   const [selectedFormat, setSelectedFormat] = useState("");
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -22,7 +20,7 @@ const Home = () => {
     setLoading(true);
     try{
 
-      const response = await fetch(`${API_URL}/download`, {
+      const response = await fetch("http://localhost:5000/download", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +56,7 @@ const Home = () => {
 
     setDownloading(true);
     try {
-      const response = await fetch(`${API_URL}/download-file`, {
+      const response = await fetch("http://localhost:5000/download-file", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
